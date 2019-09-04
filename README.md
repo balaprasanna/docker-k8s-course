@@ -1,8 +1,12 @@
 # docker-k8s-course
 
 
-Step 1: Create droplet and add docker to it with docker machine
+#### Step 1: Create droplet and add docker to it with docker machine
 
+Create the following env variables 
+`$DO_TOKEN` `$SIZE` `$REGION`
+using `doctl`
+  
 ```
 docker-machine create --driver digitalocean --digitalocean-access-token=$DO_TOKEN --digitalocean-size $SIZE --digitalocean-region $REGION dockerbox
 ```
@@ -38,7 +42,8 @@ NAME        ACTIVE   DRIVER         STATE     URL                        SWARM  
 dockerbox   -        digitalocean   Running   tcp://165.22.48.219:2376           v19.03.2   
 ```
 
-Jump inside the DO Droplet / machine
+#### Step 2: Jump inside the DO Droplet / machine
+
 ```
 $ docker-machine ssh dockerbox
 Welcome to Ubuntu 16.04.6 LTS (GNU/Linux 4.4.0-157-generic x86_64)
@@ -60,7 +65,7 @@ Docker version 19.03.2, build 6a30dfc
 
 ```
 
-Run helloworld docker container
+#### Step 3: Run helloworld docker container
 
 ```
 root@dockerbox:~# docker run hello-world
