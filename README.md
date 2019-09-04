@@ -46,7 +46,7 @@ dockerbox   -        digitalocean   Running   tcp://165.22.48.219:2376          
 
 ```
 $ docker-machine ssh dockerbox
-Welcome to Ubuntu 16.04.6 LTS (GNU/Linux 4.4.0-157-generic x86_64)
+Welcome to Ubuntu 16.04.6 LTS (GNU/Linux 4.4.0-157-generic x8664)
 
  * Documentation:  https://help.ubuntu.com
  * Management:     https://landscape.canonical.com
@@ -82,4 +82,9 @@ This message shows that your installation appears to be working correctly.
 
 ---
 
+#### Tips: Copy files from local to docker-machine
 
+Example : copy the local src folder recursively into docker-machine's /tmp folder
+```
+docker-machine scp -r src/ dockerbox:/tmp
+```
