@@ -88,3 +88,28 @@ Example : copy the local src folder recursively into docker-machine's /tmp folde
 ```
 docker-machine scp -r src/ dockerbox:/tmp
 ```
+
+
+#### Optional: Connect local docker cli --- to --- remote machine's docker engine
+
+1. Print out the docker ENV config for the remote docker-machine 
+```
+$ docker-machine env dockerbox
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://165.22.48.219:2376"
+export DOCKER_CERT_PATH="/home/bala/.docker/machine/machines/dockerbox"
+export DOCKER_MACHINE_NAME="dockerbox"
+# Run this command to configure your shell: 
+# eval $(docker-machine env dockerbox)
+(base) bala@issadmin-Alienware-Aurora-R7:~/Desktop/CFDSA
+```
+
+2. Eval the docker env to point local docker client to Remote docker-machine
+```
+$ eval $(docker-machine env dockerbox)
+(base) bala@issadmin-Alienware-Aurora-R7:~/Desktop/CFDSA
+(base) bala@issadmin-Alienware-Aurora-R7:~/Desktop/CFDSA
+$ docker -v
+Docker version 19.03.1, build 74b1e89
+
+```
