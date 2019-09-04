@@ -1,4 +1,7 @@
-# docker-k8s-course
+#  Docker - k8s course
+
+### Section 1: Docker
+### Section 2: K8S
 
 
 #### Step 1: Create droplet and add docker to it with docker machine
