@@ -116,3 +116,12 @@ $ docker -v
 Docker version 19.03.1, build 74b1e89
 
 ```
+
+#### rm the digital ocean docker-machine
+```
+$ docker-machine rm dockerbox
+About to remove dockerbox
+WARNING: This action will delete both local reference and remote instance.
+Are you sure? (y/n): y
+Successfully removed dockerbox
+```
