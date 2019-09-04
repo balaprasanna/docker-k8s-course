@@ -37,3 +37,44 @@ $ docker-machine ls
 NAME        ACTIVE   DRIVER         STATE     URL                        SWARM   DOCKER     ERRORS
 dockerbox   -        digitalocean   Running   tcp://165.22.48.219:2376           v19.03.2   
 ```
+
+Jump inside the DO Droplet / machine
+```
+$ docker-machine ssh dockerbox
+Welcome to Ubuntu 16.04.6 LTS (GNU/Linux 4.4.0-157-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+29 packages can be updated.
+12 updates are security updates.
+
+New release '18.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+root@dockerbox:~# ls
+root@dockerbox:~# docker -v
+Docker version 19.03.2, build 6a30dfc
+
+```
+
+Run helloworld docker container
+
+```
+root@dockerbox:~# docker run hello-world
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+1b930d010525: Pull complete 
+Digest: sha256:451ce787d12369c5df2a32c85e5a03d52cbcef6eb3586dd03075f3034f10adcd
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+```
+
+---
+
+
