@@ -32,3 +32,8 @@ To see how to connect your Docker Client to the Docker Engine running on this vi
 ```
 ---
 
+$ docker-machine ls
+```
+NAME        ACTIVE   DRIVER         STATE     URL                        SWARM   DOCKER     ERRORS
+dockerbox   -        digitalocean   Running   tcp://165.22.48.219:2376           v19.03.2   
+```
